@@ -1,0 +1,250 @@
+:root {
+  --gap: 2rem
+}
+
+/* reset the default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: inherit;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1.15;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  background-color: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* font */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+/* styling elements */
+.navbar-toggler .menu {
+  background-color: #3f3a39;
+  position: absolute;
+  display: block;
+  top: 100%;
+  right: 0;
+  padding: 24px;
+  width: 85vw;
+  max-width: 300px;
+  z-index: 1;
+  display: none;
+}
+
+.navbar-toggler:hover > .menu {
+  display: block;
+}
+
+.navbar-toggler-icon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 2.2rem;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  width: 100%;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+  height: 3px;
+  background-color: #434242;
+  border-radius: 1px;
+}
+
+.navbar-toggler-icon::before {
+  top: -190%;
+}
+
+.navbar-toggler-icon::after {
+  top: 190%;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.active {
+  border-bottom: 3px solid #00000030;
+  border-radius: 5px;
+
+  background-color: #00000006;
+}
+
+.hero {
+  background: linear-gradient(
+      267.36deg,
+      rgba(0, 0, 0, 0.7) 2.2%,
+      rgba(0, 0, 0, 0.182) 58.17%
+    ),
+    url("../images/esg-green-energy-sustainable-industry-with-windmills-solar-energy-panels-ai-generation.webp");
+  background-size: cover;
+  height: 650px;
+}
+
+.btn-wrapper button {
+  padding: 12px 34px;
+  border-radius: 109px;
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.btn-primary {
+  background-color: #3cab90;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffbb1c;
+  color: #2a3334;
+}
+
+.intro {
+  max-width: 720px;
+}
+
+.bar {
+  max-width: 220px;
+  width:220px;
+  height: 3.75px;
+  position: relative;
+  background-color: #575757;
+}
+
+.bar::before {
+  content: "";
+  width: 25%;
+  position: absolute;
+  height: 3.75px;
+  background-color: #fff;
+}
+
+.features-list li {
+  counter-increment: list-counter;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.features-list li::before {
+  content: counter(list-counter) "/ "; 
+  color: #84BD3A;
+  font-weight: 700;
+  margin-right: 5px; 
+}
+
+.power, .repairs-over-replacement {
+  background-size: cover;
+  height: 505px;
+}
+
+.power {
+  background-image: url('../images/8116\ 1.webp');
+}
+
+.repairs-over-replacement {
+  background-image: url('../images/8116\ 1\(1\).webp');
+}
+
+.card {
+  flex-basis: 100%;
+}
+
+.solar-kits .card {
+  box-shadow: 0px 4px 30px 0px #0000000D;
+}
+
+.our-values .card {
+  background-color: #3CAB900D;
+  border: 1px solid #3CAB90;
+  border-radius: 12px;
+}
+
+.card .card-img {
+  position: relative;
+}
+
+.img-fluid {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-content p {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input::placeholder {
+  color: #92989F;
+}
+
+.legal-corner a {
+  text-decoration: none;
+  color: #92989F;
+  font-size: 12px;
+  border-right: 1px solid #92989F;
+  padding-right: 1rem;
+}
+
+.legal-corner a:not(:first-child) {
+  padding-left: 1rem;
+}
